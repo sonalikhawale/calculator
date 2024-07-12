@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
         MaterialButton buttonAC = findViewById(R.id.button_AC);
         MaterialButton buttonBackspace = findViewById(R.id.backspace);
         MaterialButton buttonRight = findViewById(R.id.button_right);
-        MaterialButton buttonDivide = findViewById(R.id.button_divivde);
+        MaterialButton buttonDivide = findViewById(R.id.button_divide);
         MaterialButton buttonMultiply = findViewById(R.id.button_multiply);
-        MaterialButton buttonSubtract = findViewById(R.id.button_substract);
+        MaterialButton buttonSubtract = findViewById(R.id.button_subtract);
         MaterialButton buttonAdd = findViewById(R.id.button_add);
         MaterialButton buttonMod = findViewById(R.id.button_mod);
         MaterialButton buttonDot = findViewById(R.id.button_dot);
@@ -70,8 +70,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
-
         buttonDot.setOnClickListener(v -> {
             if (!currentInput.contains(".")) {
                 currentInput += ".";
@@ -95,7 +93,6 @@ public class MainActivity extends AppCompatActivity {
         buttonDivide.setOnClickListener(operatorListener);
         buttonMod.setOnClickListener(operatorListener);
         buttonRight.setOnClickListener(operatorListener);
-
 
         buttonEqual.setOnClickListener(v -> {
             if (!previousInput.isEmpty() && !currentInput.isEmpty() && isOperatorPressed) {
@@ -133,7 +130,7 @@ public class MainActivity extends AppCompatActivity {
                 result = firstValue % secondValue;
                 break;
             case "^":
-                result = Math.pow(firstValue,secondValue);
+                result = Math.pow(firstValue, secondValue);
                 break;
         }
 
